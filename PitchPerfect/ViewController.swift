@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var stopButton: UIButton!
     
     @IBOutlet weak var recordingInProgress: UILabel!
     
@@ -17,21 +18,25 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        stopButton.hidden = true
+    }
+    
+    func appInBackground() {
+        // called by the app delegate when the app goes background
+        stopRecording()
+        stopButton.hidden = true
+        
+    }
     
     @IBAction func recordAudio(sender: UIButton) {
         recordingInProgress.hidden = false
+        stopButton.hidden = false
     }
 
-    @IBAction func stopRecording(sender: AnyObject) {
-        // this method is called by two objects: 
-        // the button and the app delegate when the user 
-        // press the Home button on the device.
-        // sender is type UIButton or AppDelegate
-        
+    @IBAction func stopRecording() {
         recordingInProgress.hidden = true
     }
     
-    
-
 }
 
