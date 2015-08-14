@@ -21,33 +21,54 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" image="microphone"/>
+                                <connections>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s9v-zI-uah"/>
+                                </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xr8-QY-1Vz">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
+                                <color key="textColor" red="0.14509803921568626" green="0.28235294117647058" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7OR-Z4-u35" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Vxg-h5-anN"/>
+                            <constraint firstItem="Xr8-QY-1Vz" firstAttribute="top" secondItem="7OR-Z4-u35" secondAttribute="bottom" constant="36" id="maj-uz-Taw"/>
+                            <constraint firstItem="Xr8-QY-1Vz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qgZ-FF-wfJ"/>
                             <constraint firstItem="7OR-Z4-u35" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zOk-by-EoX"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="7OR-Z4-u35"/>
+                                <exclude reference="Xr8-QY-1Vz"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Vxg-h5-anN"/>
                                 <exclude reference="zOk-by-EoX"/>
+                                <exclude reference="maj-uz-Taw"/>
+                                <exclude reference="qgZ-FF-wfJ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="7OR-Z4-u35"/>
+                                <include reference="Xr8-QY-1Vz"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="Vxg-h5-anN"/>
                                 <include reference="zOk-by-EoX"/>
+                                <include reference="maj-uz-Taw"/>
+                                <include reference="qgZ-FF-wfJ"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="recordingSign" destination="Xr8-QY-1Vz" id="HXi-Me-3Ht"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
