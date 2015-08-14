@@ -8,14 +8,17 @@
 
 import UIKit
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    var rootVC: ViewController {
+    var rootVC: ViewController? {
         get {
-            return window?.rootViewController as! ViewController
+            let navController = window?.rootViewController as? UINavigationController
+            return navController?.topViewController as? ViewController
+            
         }
     }
     
@@ -27,13 +30,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillResignActive(application: UIApplication) {
         // inform the view controller.
-        rootVC.stopRecording()
+        if let rootVC = rootVC {
+            rootVC.stopRecording()
+        }
+        
                 
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
         // Inform the view controller.
-        rootVC.appInBackground()
+        if let rootVC = rootVC {
+            rootVC.appInBackground()
+        }
+        
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
