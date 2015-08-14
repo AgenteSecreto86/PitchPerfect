@@ -25,44 +25,60 @@
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s9v-zI-uah"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xr8-QY-1Vz">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xr8-QY-1Vz">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
                                 <color key="textColor" red="0.14509803921568626" green="0.28235294117647058" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hr-rb-uSX">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="stopButton"/>
+                                <connections>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5bX-TO-V08"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7OR-Z4-u35" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Vxg-h5-anN"/>
+                            <constraint firstItem="5hr-rb-uSX" firstAttribute="top" secondItem="7OR-Z4-u35" secondAttribute="bottom" constant="71" id="W9c-Pr-akw"/>
                             <constraint firstItem="Xr8-QY-1Vz" firstAttribute="top" secondItem="7OR-Z4-u35" secondAttribute="bottom" constant="36" id="maj-uz-Taw"/>
                             <constraint firstItem="Xr8-QY-1Vz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qgZ-FF-wfJ"/>
+                            <constraint firstItem="5hr-rb-uSX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yZ1-gU-h2s"/>
                             <constraint firstItem="7OR-Z4-u35" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zOk-by-EoX"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="7OR-Z4-u35"/>
                                 <exclude reference="Xr8-QY-1Vz"/>
+                                <exclude reference="5hr-rb-uSX"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="maj-uz-Taw"/>
-                                <exclude reference="qgZ-FF-wfJ"/>
                                 <exclude reference="Vxg-h5-anN"/>
                                 <exclude reference="zOk-by-EoX"/>
+                                <exclude reference="maj-uz-Taw"/>
+                                <exclude reference="qgZ-FF-wfJ"/>
+                                <exclude reference="W9c-Pr-akw"/>
+                                <exclude reference="yZ1-gU-h2s"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="7OR-Z4-u35"/>
                                 <include reference="Xr8-QY-1Vz"/>
+                                <include reference="5hr-rb-uSX"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="maj-uz-Taw"/>
-                                <include reference="qgZ-FF-wfJ"/>
                                 <include reference="Vxg-h5-anN"/>
                                 <include reference="zOk-by-EoX"/>
+                                <include reference="maj-uz-Taw"/>
+                                <include reference="qgZ-FF-wfJ"/>
+                                <include reference="W9c-Pr-akw"/>
+                                <include reference="yZ1-gU-h2s"/>
                             </mask>
                         </variation>
                     </view>
@@ -76,5 +92,6 @@
     </scenes>
     <resources>
         <image name="microphone" width="100" height="100"/>
+        <image name="stopButton" width="50" height="50"/>
     </resources>
 </document>

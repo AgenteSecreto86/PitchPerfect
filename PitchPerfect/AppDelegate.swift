@@ -21,7 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillResignActive(application: UIApplication) {
         
-        window?.rootViewController?.viewWillAppear(true)
+        if let myVC = window?.rootViewController as? ViewController {
+            myVC.stopRecording(self)
+        }
+        
+        
     }
 
     func applicationDidEnterBackground(application: UIApplication) {

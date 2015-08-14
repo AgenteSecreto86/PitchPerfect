@@ -15,18 +15,23 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
-    override func viewWillAppear(animated: Bool) {
-        // note: this method is call also by the AppDelegate in applicatinWillResignActive method.
-        recordingInProgress.hidden = true
-    }
-
+    
     @IBAction func recordAudio(sender: UIButton) {
         recordingInProgress.hidden = false
     }
 
+    @IBAction func stopRecording(sender: AnyObject) {
+        // this method is called by two objects: 
+        // the button and the app delegate when the user 
+        // press the Home button on the device.
+        // sender is type UIButton or AppDelegate
+        
+        recordingInProgress.hidden = true
+    }
+    
+    
 
 }
 
