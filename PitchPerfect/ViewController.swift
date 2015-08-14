@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     
-    @IBOutlet weak var recordingSign: UILabel!
+    @IBOutlet weak var recordingInProgress: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,11 +20,11 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         // note: this method is call also by the AppDelegate in applicatinWillResignActive method.
-        recordingSign.hidden = true
+        recordingInProgress.hidden = true
     }
 
     @IBAction func recordAudio(sender: UIButton) {
-        recordingSign.hidden = false
+        recordingInProgress.hidden = false
     }
 
 

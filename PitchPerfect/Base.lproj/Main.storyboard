@@ -25,7 +25,7 @@
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s9v-zI-uah"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xr8-QY-1Vz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xr8-QY-1Vz">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
@@ -47,10 +47,10 @@
                                 <exclude reference="Xr8-QY-1Vz"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Vxg-h5-anN"/>
-                                <exclude reference="zOk-by-EoX"/>
                                 <exclude reference="maj-uz-Taw"/>
                                 <exclude reference="qgZ-FF-wfJ"/>
+                                <exclude reference="Vxg-h5-anN"/>
+                                <exclude reference="zOk-by-EoX"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -59,15 +59,15 @@
                                 <include reference="Xr8-QY-1Vz"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Vxg-h5-anN"/>
-                                <include reference="zOk-by-EoX"/>
                                 <include reference="maj-uz-Taw"/>
                                 <include reference="qgZ-FF-wfJ"/>
+                                <include reference="Vxg-h5-anN"/>
+                                <include reference="zOk-by-EoX"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="recordingSign" destination="Xr8-QY-1Vz" id="HXi-Me-3Ht"/>
+                        <outlet property="recordingInProgress" destination="Xr8-QY-1Vz" id="d69-3R-9AP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
