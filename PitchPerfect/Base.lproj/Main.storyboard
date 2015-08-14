@@ -58,12 +58,12 @@
                                 <exclude reference="5hr-rb-uSX"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Vxg-h5-anN"/>
-                                <exclude reference="zOk-by-EoX"/>
                                 <exclude reference="maj-uz-Taw"/>
                                 <exclude reference="qgZ-FF-wfJ"/>
                                 <exclude reference="W9c-Pr-akw"/>
                                 <exclude reference="yZ1-gU-h2s"/>
+                                <exclude reference="Vxg-h5-anN"/>
+                                <exclude reference="zOk-by-EoX"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -73,12 +73,12 @@
                                 <include reference="5hr-rb-uSX"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Vxg-h5-anN"/>
-                                <include reference="zOk-by-EoX"/>
                                 <include reference="maj-uz-Taw"/>
                                 <include reference="qgZ-FF-wfJ"/>
                                 <include reference="W9c-Pr-akw"/>
                                 <include reference="yZ1-gU-h2s"/>
+                                <include reference="Vxg-h5-anN"/>
+                                <include reference="zOk-by-EoX"/>
                             </mask>
                         </variation>
                     </view>
