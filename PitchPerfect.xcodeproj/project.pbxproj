@@ -58,14 +58,14 @@
 		6E3E698A1B7C6A5000037C9F /* PitchPerfect */ = {
 			isa = PBXGroup;
 			children = (
-				6EF1C0B11B7EF60400402D1E /* movie_quote.mp3 */,
 				6E3E698B1B7C6A5000037C9F /* AppDelegate.swift */,
 				6E3E698D1B7C6A5000037C9F /* ViewController.swift */,
+				6EF1C0AF1B7EA62D00402D1E /* PlaySoundsViewController.swift */,
 				6E3E698F1B7C6A5000037C9F /* Main.storyboard */,
 				6E3E69921B7C6A5000037C9F /* Assets.xcassets */,
 				6E3E69941B7C6A5000037C9F /* LaunchScreen.storyboard */,
 				6E3E69971B7C6A5000037C9F /* Info.plist */,
-				6EF1C0AF1B7EA62D00402D1E /* PlaySoundsViewController.swift */,
+				6EF1C0B11B7EF60400402D1E /* movie_quote.mp3 */,
 			);
 			path = PitchPerfect;
 			sourceTree = "<group>";
