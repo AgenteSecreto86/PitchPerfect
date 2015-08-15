@@ -106,13 +106,6 @@
                     <view key="view" contentMode="scaleToFill" id="x1p-AA-qVg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <userGuides>
-                            <userLayoutGuide location="200" affinity="minX"/>
-                            <userLayoutGuide location="70" affinity="minX"/>
-                            <userLayoutGuide location="150" affinity="minX"/>
-                            <userLayoutGuide location="250" affinity="minX"/>
-                            <userLayoutGuide location="330" affinity="minX"/>
-                        </userGuides>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkW-o5-VTk" userLabel="snailButton">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -130,45 +123,61 @@
                                     <action selector="playSoundsFast:" destination="eOg-og-xDJ" eventType="touchUpInside" id="xwB-4b-554"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTG-jE-6yh">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" image="stopButton"/>
+                                <connections>
+                                    <action selector="stopSound:" destination="eOg-og-xDJ" eventType="touchUpInside" id="Ghi-hd-VGR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="vkW-o5-VTk" firstAttribute="leading" secondItem="x1p-AA-qVg" secondAttribute="leadingMargin" constant="20" id="D9s-PY-I6g">
-                                <variation key="widthClass=compact" constant="30"/>
+                                <variation key="widthClass=compact" constant="25"/>
                             </constraint>
                             <constraint firstItem="eaZ-m8-bK1" firstAttribute="top" secondItem="dHX-j3-W9b" secondAttribute="bottom" constant="61" id="ZX1-aQ-TBU">
                                 <variation key="widthClass=compact" constant="50"/>
                             </constraint>
+                            <constraint firstItem="OXw-23-Olo" firstAttribute="top" secondItem="bTG-jE-6yh" secondAttribute="bottom" constant="117" id="bqt-ci-jib"/>
                             <constraint firstItem="vkW-o5-VTk" firstAttribute="top" secondItem="dHX-j3-W9b" secondAttribute="bottom" constant="56" id="lNy-Dq-kT8">
                                 <variation key="widthClass=compact" constant="50"/>
                             </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="eaZ-m8-bK1" secondAttribute="trailing" constant="39" id="or6-2P-vE8">
-                                <variation key="widthClass=compact" constant="30"/>
+                                <variation key="widthClass=compact" constant="25"/>
                             </constraint>
+                            <constraint firstItem="bTG-jE-6yh" firstAttribute="centerX" secondItem="x1p-AA-qVg" secondAttribute="centerX" id="qVy-60-6tX"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="vkW-o5-VTk"/>
                                 <exclude reference="eaZ-m8-bK1"/>
+                                <exclude reference="bTG-jE-6yh"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="D9s-PY-I6g"/>
                                 <exclude reference="lNy-Dq-kT8"/>
                                 <exclude reference="ZX1-aQ-TBU"/>
                                 <exclude reference="or6-2P-vE8"/>
+                                <exclude reference="qVy-60-6tX"/>
+                                <exclude reference="bqt-ci-jib"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="vkW-o5-VTk"/>
                                 <include reference="eaZ-m8-bK1"/>
+                                <include reference="bTG-jE-6yh"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="D9s-PY-I6g"/>
                                 <include reference="lNy-Dq-kT8"/>
                                 <include reference="ZX1-aQ-TBU"/>
                                 <include reference="or6-2P-vE8"/>
+                                <include reference="qVy-60-6tX"/>
+                                <include reference="bqt-ci-jib"/>
                             </mask>
                         </variation>
                     </view>

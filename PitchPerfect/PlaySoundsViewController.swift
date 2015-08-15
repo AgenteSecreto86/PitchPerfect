@@ -20,6 +20,7 @@ class PlaySoundsViewController: UIViewController, AVAudioPlayerDelegate {
         do {
             audioPlayer = try AVAudioPlayer(contentsOfURL: url)
             audioPlayer.delegate = self
+            audioPlayer.enableRate = true
             audioPlayer.prepareToPlay()
         }
         catch let error as NSError {
@@ -28,12 +29,24 @@ class PlaySoundsViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     @IBAction func playSoundSlowly(sender: UIButton) {
-        audioPlayer.play()
+        playSoundsWithRate(0.5)
     }
     
     @IBAction func playSoundsFast(sender: UIButton) {
-        print("Fast")
+        playSoundsWithRate(1.5)
     }
+    
+    @IBAction func stopSound(sender: UIButton) {
+        audioPlayer.stop()
+    }
+    
+    func playSoundsWithRate(rate: Float) {
+        audioPlayer.stop()
+        audioPlayer.currentTime = 0.0
+        audioPlayer.rate = rate
+        audioPlayer.play()
+    }
+    
     
     //MARK: - AVAudioPlayerDelegate Protocol
     
@@ -46,7 +59,10 @@ class PlaySoundsViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     func audioPlayerDecodeErrorDidOccur(player: AVAudioPlayer, error: NSError?) {
-        print(error!.localizedDescription)
+        if let error = error {
+            print(error.localizedDescription)
+        }
+        
     }
     
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
