@@ -13,6 +13,7 @@
 		6E3E69931B7C6A5000037C9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E3E69921B7C6A5000037C9F /* Assets.xcassets */; };
 		6E3E69961B7C6A5000037C9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E3E69941B7C6A5000037C9F /* LaunchScreen.storyboard */; };
 		6EF1C0B01B7EA62D00402D1E /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF1C0AF1B7EA62D00402D1E /* PlaySoundsViewController.swift */; };
+		6EF1C0B21B7EF60400402D1E /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6EF1C0B11B7EF60400402D1E /* movie_quote.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6E3E69951B7C6A5000037C9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E3E69971B7C6A5000037C9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EF1C0AF1B7EA62D00402D1E /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
+		6EF1C0B11B7EF60400402D1E /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = movie_quote.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		6E3E698A1B7C6A5000037C9F /* PitchPerfect */ = {
 			isa = PBXGroup;
 			children = (
+				6EF1C0B11B7EF60400402D1E /* movie_quote.mp3 */,
 				6E3E698B1B7C6A5000037C9F /* AppDelegate.swift */,
 				6E3E698D1B7C6A5000037C9F /* ViewController.swift */,
 				6E3E698F1B7C6A5000037C9F /* Main.storyboard */,
@@ -126,6 +129,7 @@
 			files = (
 				6E3E69961B7C6A5000037C9F /* LaunchScreen.storyboard in Resources */,
 				6E3E69931B7C6A5000037C9F /* Assets.xcassets in Resources */,
+				6EF1C0B21B7EF60400402D1E /* movie_quote.mp3 in Resources */,
 				6E3E69911B7C6A5000037C9F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
