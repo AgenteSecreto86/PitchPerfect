@@ -9,7 +9,7 @@
         <!--Record-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RecordSoundsViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -157,12 +157,12 @@
                                 <exclude reference="bTG-jE-6yh"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="D9s-PY-I6g"/>
-                                <exclude reference="lNy-Dq-kT8"/>
+                                <exclude reference="bqt-ci-jib"/>
+                                <exclude reference="qVy-60-6tX"/>
                                 <exclude reference="ZX1-aQ-TBU"/>
                                 <exclude reference="or6-2P-vE8"/>
-                                <exclude reference="qVy-60-6tX"/>
-                                <exclude reference="bqt-ci-jib"/>
+                                <exclude reference="D9s-PY-I6g"/>
+                                <exclude reference="lNy-Dq-kT8"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -172,12 +172,12 @@
                                 <include reference="bTG-jE-6yh"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="D9s-PY-I6g"/>
-                                <include reference="lNy-Dq-kT8"/>
+                                <include reference="bqt-ci-jib"/>
+                                <include reference="qVy-60-6tX"/>
                                 <include reference="ZX1-aQ-TBU"/>
                                 <include reference="or6-2P-vE8"/>
-                                <include reference="qVy-60-6tX"/>
-                                <include reference="bqt-ci-jib"/>
+                                <include reference="D9s-PY-I6g"/>
+                                <include reference="lNy-Dq-kT8"/>
                             </mask>
                         </variation>
                     </view>

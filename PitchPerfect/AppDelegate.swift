@@ -14,17 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    var rootVC: ViewController? {
-        get {
-            let navController = window?.rootViewController as? UINavigationController
-            return navController?.topViewController as? ViewController
-            
-        }
-    }
-    
+    var rootVC: RecordSoundsViewController?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        let navController = window?.rootViewController as? UINavigationController
+        rootVC = navController?.topViewController as? RecordSoundsViewController
         return true
     }
 
@@ -33,8 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let rootVC = rootVC {
             rootVC.stopRecording()
         }
-        
-                
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
@@ -42,7 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let rootVC = rootVC {
             rootVC.appInBackground()
         }
-        
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
