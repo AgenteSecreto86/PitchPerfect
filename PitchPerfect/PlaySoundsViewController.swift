@@ -50,13 +50,6 @@ class PlaySoundsViewController: UIViewController, AVAudioPlayerDelegate {
     
     //MARK: - AVAudioPlayerDelegate Protocol
     
-    func audioPlayerBeginInterruption(player: AVAudioPlayer) {
-        
-    }
-    
-    func audioPlayerEndInterruption(player: AVAudioPlayer) {
-        
-    }
     
     func audioPlayerDecodeErrorDidOccur(player: AVAudioPlayer, error: NSError?) {
         if let error = error {
