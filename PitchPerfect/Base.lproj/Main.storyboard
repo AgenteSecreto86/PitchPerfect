@@ -36,7 +36,7 @@
                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="50" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hr-rb-uSX">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
-                                <state key="normal" image="stopButton"/>
+                                <state key="normal" image="stop"/>
                                 <connections>
                                     <action selector="stopRecording" destination="BYZ-38-t0r" eventType="touchUpInside" id="p5T-rp-uM9"/>
                                     <segue destination="eOg-og-xDJ" kind="show" id="iin-jh-Dje"/>
@@ -126,7 +126,7 @@
                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="50" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTG-jE-6yh">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
-                                <state key="normal" image="stopButton"/>
+                                <state key="normal" image="stop"/>
                                 <connections>
                                     <action selector="stopSound:" destination="eOg-og-xDJ" eventType="touchUpInside" id="Ghi-hd-VGR"/>
                                 </connections>
@@ -210,6 +210,6 @@
         <image name="fast" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="slow" width="100" height="100"/>
-        <image name="stopButton" width="50" height="50"/>
+        <image name="stop" width="50" height="50"/>
     </resources>
 </document>
