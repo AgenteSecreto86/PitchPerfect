@@ -110,6 +110,10 @@
                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="100" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkW-o5-VTk" userLabel="snailButton">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <state key="normal" image="slow"/>
                                 <connections>
                                     <action selector="playSoundSlowly:" destination="eOg-og-xDJ" eventType="touchUpInside" id="s8g-8T-vq6"/>
@@ -118,12 +122,17 @@
                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="100" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaZ-m8-bK1" userLabel="rabitButton">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <size key="titleShadowOffset" width="6" height="6"/>
                                 <state key="normal" image="fast"/>
                                 <connections>
                                     <action selector="playSoundsFast:" destination="eOg-og-xDJ" eventType="touchUpInside" id="xwB-4b-554"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="50" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTG-jE-6yh">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="50" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTG-jE-6yh">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" image="stop"/>
@@ -181,6 +190,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="stopPlayingButton" destination="bTG-jE-6yh" id="8cp-6u-RaN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="brZ-li-J8H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

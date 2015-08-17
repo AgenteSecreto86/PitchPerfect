@@ -28,54 +28,47 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         do {
             try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord, withOptions:AVAudioSessionCategoryOptions.MixWithOthers)
             try audioSession.setMode(AVAudioSessionModeDefault)
+            try audioSession.overrideOutputAudioPort(.Speaker)
             try audioSession.setActive(true)
         } catch let error as NSError {
             print(error.localizedDescription)
         }
+        
         // Subscribe to audio session interruption notifications
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "handleAudioSessionInterruption:", name: AVAudioSessionInterruptionNotification, object: nil)
     }
     
     override func viewWillAppear(animated: Bool) {
-        stopButton.hidden = true
-        recordButton.enabled = true
+        prepareUI()
     }
     
-    func appInBackground() {
-        // for the app delegate when the app goes to the background
-        
+    func prepareUI() {
+        // also called by the app delegate when applicationWillResignActive       
         stopButton.hidden = true
         recordButton.enabled = true
         recordingInProgress.hidden = true
     }
-    
+
     //MARK: - Notification handler
     
-    func handleAudioSessionInterruption(notification: NSNotification) -> Void {
-        // userInfo  for this notification contains a dictionary with two keys
+    func handleAudioSessionInterruption(notification: NSNotification) {
+        
         if let userInfo = notification.userInfo {
-            
-            //FIXME: - breaks here when pressing the lock button on the device.
-            
-            let interruptionType = userInfo[AVAudioSessionInterruptionTypeKey] as! AVAudioSessionInterruptionType
-            let interruptionOption = userInfo[AVAudioSessionInterruptionOptionKey] as! AVAudioSessionInterruptionOptions
-            
-            switch interruptionType {
-            case .Began :
-                //TODO: Audio has stopped, session is inactive. Update UI, state etc.
-                print("interruption began")
-                
-            case .Ended :
-                //TODO: Reactivate the audio session and update UI
-                print("interruption ended")
-                // check to continue playback
-                if interruptionOption == AVAudioSessionInterruptionOptions.ShouldResume {
-                    //TODO: Restart the player if it was playing
-                    print("interruption ended. ok to resume playing")
+            let interruptionType = userInfo[AVAudioSessionInterruptionTypeKey] as? AVAudioSessionInterruptionType
+            if let interruption = interruptionType {
+                switch interruption {
+                case .Began :
+                    //TODO: Audio has stopped, session is inactive. Update UI, state etc.
+                    print("interruption began")
+                    
+                case .Ended :
+                    //TODO: Reactivate the audio session and update UI
+                    print("interruption ended")
                 }
             }
         }
+        
     }
 
     
@@ -108,7 +101,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
 
     @IBAction func stopRecording() {
-        
         recordingInProgress.hidden = true
         
         audioRecorder.stop()
@@ -134,8 +126,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             
         } else {
             print("Recording was not successfull")
-            recordButton.enabled = true
-            stopButton.hidden = true
+            prepareUI()
         }
         
     }

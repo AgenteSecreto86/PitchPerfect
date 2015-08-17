@@ -14,6 +14,8 @@ class PlaySoundsViewController: UIViewController, AVAudioPlayerDelegate {
     var audioPlayer: AVAudioPlayer!
     var recievedAudio: RecordedAudio!
 
+    @IBOutlet weak var stopPlayingButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,23 +46,23 @@ class PlaySoundsViewController: UIViewController, AVAudioPlayerDelegate {
         audioPlayer.stop()
         audioPlayer.currentTime = 0.0
         audioPlayer.rate = rate
+        audioPlayer.volume = 1.0
+        stopPlayingButton.hidden = false
+        
         audioPlayer.play()
     }
-    
-    
+        
     //MARK: - AVAudioPlayerDelegate Protocol
-    
     
     func audioPlayerDecodeErrorDidOccur(player: AVAudioPlayer, error: NSError?) {
         if let error = error {
             print(error.localizedDescription)
         }
-        
     }
     
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
         if flag {
-            print("Audio played successfully")
+            stopPlayingButton.hidden = true
         }
     }
     

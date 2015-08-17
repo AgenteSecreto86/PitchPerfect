@@ -26,15 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillResignActive(application: UIApplication) {
         // inform the view controller.
         if let rootVC = rootVC {
-            rootVC.stopRecording()
+            rootVC.prepareUI()
         }
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
-        // Inform the view controller.
-        if let rootVC = rootVC {
-            rootVC.appInBackground()
-        }
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
