@@ -14,7 +14,6 @@
 		6E3E69961B7C6A5000037C9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E3E69941B7C6A5000037C9F /* LaunchScreen.storyboard */; };
 		6E83F45F1B8120FB00C416CD /* RecordedAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E83F45E1B8120FB00C416CD /* RecordedAudio.swift */; };
 		6EF1C0B01B7EA62D00402D1E /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF1C0AF1B7EA62D00402D1E /* PlaySoundsViewController.swift */; };
-		6EF1C0B21B7EF60400402D1E /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6EF1C0B11B7EF60400402D1E /* movie_quote.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 		6E3E69971B7C6A5000037C9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E83F45E1B8120FB00C416CD /* RecordedAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordedAudio.swift; sourceTree = "<group>"; };
 		6EF1C0AF1B7EA62D00402D1E /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
-		6EF1C0B11B7EF60400402D1E /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = movie_quote.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +66,6 @@
 				6E3E69921B7C6A5000037C9F /* Assets.xcassets */,
 				6E3E69941B7C6A5000037C9F /* LaunchScreen.storyboard */,
 				6E3E69971B7C6A5000037C9F /* Info.plist */,
-				6EF1C0B11B7EF60400402D1E /* movie_quote.mp3 */,
 			);
 			path = PitchPerfect;
 			sourceTree = "<group>";
@@ -132,7 +129,6 @@
 			files = (
 				6E3E69961B7C6A5000037C9F /* LaunchScreen.storyboard in Resources */,
 				6E3E69931B7C6A5000037C9F /* Assets.xcassets in Resources */,
-				6EF1C0B21B7EF60400402D1E /* movie_quote.mp3 in Resources */,
 				6E3E69911B7C6A5000037C9F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

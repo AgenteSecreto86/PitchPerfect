@@ -55,6 +55,9 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     func handleAudioSessionInterruption(notification: NSNotification) -> Void {
         // userInfo  for this notification contains a dictionary with two keys
         if let userInfo = notification.userInfo {
+            
+            //FIXME: - breaks here when pressing the lock button on the device.
+            
             let interruptionType = userInfo[AVAudioSessionInterruptionTypeKey] as! AVAudioSessionInterruptionType
             let interruptionOption = userInfo[AVAudioSessionInterruptionOptionKey] as! AVAudioSessionInterruptionOptions
             
@@ -102,7 +105,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         }
                 
         audioRecorder.record()
-        print(fileURL)
     }
 
     @IBAction func stopRecording() {
@@ -134,6 +136,15 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             print("Recording was not successfull")
             recordButton.enabled = true
             stopButton.hidden = true
+        }
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "stopRecording" {
+            let playSoundsVC = segue.destinationViewController as! PlaySoundsViewController
+            let data = sender as! RecordedAudio
+            playSoundsVC.recievedAudio = data
         }
     }
 }

@@ -12,13 +12,13 @@ import AVFoundation
 class PlaySoundsViewController: UIViewController, AVAudioPlayerDelegate {
     
     var audioPlayer: AVAudioPlayer!
+    var recievedAudio: RecordedAudio!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let url = NSURL.fileURLWithPath(NSBundle.mainBundle().pathForResource("movie_quote", ofType: "mp3")!)
         do {
-            audioPlayer = try AVAudioPlayer(contentsOfURL: url)
+            audioPlayer = try AVAudioPlayer(contentsOfURL: recievedAudio.filePathURL)
             audioPlayer.delegate = self
             audioPlayer.enableRate = true
             audioPlayer.prepareToPlay()
@@ -60,7 +60,7 @@ class PlaySoundsViewController: UIViewController, AVAudioPlayerDelegate {
     
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
         if flag {
-            print("Done successfully")
+            print("Audio played successfully")
         }
     }
     
