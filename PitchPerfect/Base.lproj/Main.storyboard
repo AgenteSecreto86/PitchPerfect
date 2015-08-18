@@ -140,17 +140,46 @@
                                     <action selector="stopSound:" destination="eOg-og-xDJ" eventType="touchUpInside" id="Ghi-hd-VGR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="100" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8I-w0-Dfd" userLabel="snailButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <state key="normal" image="chipmunk"/>
+                                <connections>
+                                    <action selector="chipmunkAudio:" destination="eOg-og-xDJ" eventType="touchUpInside" id="QBJ-ig-5Tw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="100" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6J-je-SfA" userLabel="rabitButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <size key="titleShadowOffset" width="6" height="6"/>
+                                <state key="normal" image="darthvader"/>
+                                <connections>
+                                    <action selector="playDarthvaderAudio:" destination="eOg-og-xDJ" eventType="touchUpInside" id="REa-kn-gLx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="D6J-je-SfA" secondAttribute="trailing" constant="25" id="7YP-SD-DRX"/>
                             <constraint firstItem="vkW-o5-VTk" firstAttribute="leading" secondItem="x1p-AA-qVg" secondAttribute="leadingMargin" constant="20" id="D9s-PY-I6g">
                                 <variation key="widthClass=compact" constant="25"/>
                             </constraint>
+                            <constraint firstItem="f8I-w0-Dfd" firstAttribute="top" secondItem="vkW-o5-VTk" secondAttribute="bottom" constant="49" id="OK7-yt-1Q7"/>
+                            <constraint firstItem="D6J-je-SfA" firstAttribute="top" secondItem="eaZ-m8-bK1" secondAttribute="bottom" constant="49" id="Ruq-rj-uMn"/>
                             <constraint firstItem="eaZ-m8-bK1" firstAttribute="top" secondItem="dHX-j3-W9b" secondAttribute="bottom" constant="61" id="ZX1-aQ-TBU">
                                 <variation key="widthClass=compact" constant="50"/>
                             </constraint>
                             <constraint firstItem="OXw-23-Olo" firstAttribute="top" secondItem="bTG-jE-6yh" secondAttribute="bottom" constant="117" id="bqt-ci-jib"/>
+                            <constraint firstItem="f8I-w0-Dfd" firstAttribute="leading" secondItem="x1p-AA-qVg" secondAttribute="leadingMargin" constant="25" id="eib-MT-0KT"/>
                             <constraint firstItem="vkW-o5-VTk" firstAttribute="top" secondItem="dHX-j3-W9b" secondAttribute="bottom" constant="56" id="lNy-Dq-kT8">
                                 <variation key="widthClass=compact" constant="50"/>
                             </constraint>
@@ -164,14 +193,20 @@
                                 <exclude reference="vkW-o5-VTk"/>
                                 <exclude reference="eaZ-m8-bK1"/>
                                 <exclude reference="bTG-jE-6yh"/>
+                                <exclude reference="f8I-w0-Dfd"/>
+                                <exclude reference="D6J-je-SfA"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="bqt-ci-jib"/>
-                                <exclude reference="qVy-60-6tX"/>
-                                <exclude reference="ZX1-aQ-TBU"/>
-                                <exclude reference="or6-2P-vE8"/>
                                 <exclude reference="D9s-PY-I6g"/>
                                 <exclude reference="lNy-Dq-kT8"/>
+                                <exclude reference="OK7-yt-1Q7"/>
+                                <exclude reference="eib-MT-0KT"/>
+                                <exclude reference="ZX1-aQ-TBU"/>
+                                <exclude reference="or6-2P-vE8"/>
+                                <exclude reference="7YP-SD-DRX"/>
+                                <exclude reference="Ruq-rj-uMn"/>
+                                <exclude reference="qVy-60-6tX"/>
+                                <exclude reference="bqt-ci-jib"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -179,14 +214,20 @@
                                 <include reference="vkW-o5-VTk"/>
                                 <include reference="eaZ-m8-bK1"/>
                                 <include reference="bTG-jE-6yh"/>
+                                <include reference="f8I-w0-Dfd"/>
+                                <include reference="D6J-je-SfA"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="bqt-ci-jib"/>
-                                <include reference="qVy-60-6tX"/>
-                                <include reference="ZX1-aQ-TBU"/>
-                                <include reference="or6-2P-vE8"/>
                                 <include reference="D9s-PY-I6g"/>
                                 <include reference="lNy-Dq-kT8"/>
+                                <include reference="OK7-yt-1Q7"/>
+                                <include reference="eib-MT-0KT"/>
+                                <include reference="ZX1-aQ-TBU"/>
+                                <include reference="or6-2P-vE8"/>
+                                <include reference="7YP-SD-DRX"/>
+                                <include reference="Ruq-rj-uMn"/>
+                                <include reference="qVy-60-6tX"/>
+                                <include reference="bqt-ci-jib"/>
                             </mask>
                         </variation>
                     </view>
@@ -219,6 +260,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chipmunk" width="100" height="100"/>
+        <image name="darthvader" width="100" height="100"/>
         <image name="fast" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="slow" width="100" height="100"/>
